@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+</head>
+
+    <body>
+    <input type='button' value='click' id='num1'>
+    <script>
+        function GetTime(){
+            var date = new Date();
+            alert("Now : Time" + date.toLocaleDateString());
+        }
+        
+        //Lamda
+        window.onload = function(){
+            var b = document.getElementById("num1");
+            b.setAttribute("onClick", "GetTime()");
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+</head>
+
+    <body>
+    <p id="displayNow">0</p>
+    <p id="elapseTime">0</p>
+    <input type='button' value='Start' onClick='start()'>
+    <input type='button' value='STop' onClick='stop()'>
+    <script>
+        var startTime, timer;
+        
+     function start() {
+        startTime = new Date(); //1sec, 1000ms마다 시간과 경과한 시간 표시
+        timer = setInterval(displayTime, 1000); 
+     }
+     function displayTime() {
+        var now = new Date(); 
+        var elapse = ((now - startTime) / 1000).toFixed(0); 
+         alert(elapse); 
+         document.getElementById("displayNow").innerHTML =
+        now.toLocaleTimeString(); document.getElementById("elapseTime").innerHTML = elapse; 
+     }
+    function stop() {
+        clearInterval(timer); 
+    }
+
+    </script>
+    </body>
+</html>

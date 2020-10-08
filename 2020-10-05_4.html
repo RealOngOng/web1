@@ -1,0 +1,26 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+</head>
+
+    <body>
+    <input type='button' value='Start' onClick='func()'>
+    <script>
+        var win;
+        
+        function winOpen(path) {
+            win = window.open(path, "", "_blank");
+        }
+        
+        function func(){
+            setTimeout(function(){
+                winOpen("https://google.com");
+            }, 5000);
+            setTimeout(function(){
+                winOpen("https://github.com/RealOngOng/web1");
+            }, 5000);
+        }
+    </script>
+    </body>
+</html>
