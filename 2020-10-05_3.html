@@ -13,13 +13,12 @@
         var startTime, timer;
         
      function start() {
-        startTime = new Date(); //1sec, 1000ms마다 시간과 경과한 시간 표시
+        startTime = new Date();
         timer = setInterval(displayTime, 1000); 
      }
      function displayTime() {
         var now = new Date(); 
         var elapse = ((now - startTime) / 1000).toFixed(0); 
-         alert(elapse); 
          document.getElementById("displayNow").innerHTML =
         now.toLocaleTimeString(); document.getElementById("elapseTime").innerHTML = elapse; 
      }
