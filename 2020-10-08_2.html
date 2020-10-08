@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="button" value="while 5!" onclick="solve1(5)">
+        <input type="button" value="recursion 5!" onclick="alert(solve2(5))">
+        <script>
+            function solve1(num){
+                var ans = 1;
+                
+                while(num > 1)
+                    ans *= num--;
+                
+                alert(ans);
+            }
+            
+            function solve2(num){
+                if(num == 1) return 1;
+                return solve2(num-1) * num;
+            }
+        </script>
+    </body>
+</html>
