@@ -1,0 +1,32 @@
+<!doctype>
+
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+    <body>
+    <canvas id="canvas" height="400" width="400">This browser doesn't support canvas</canvas>
+    <script>
+        window.onload = function(){
+         var canvas = document.getElementById('canvas'); 
+            if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+                ctx.moveTo(0, 0); 
+                ctx.lineTo(200, 0); 
+                ctx.lineTo(0, 200); 
+                ctx.fill(); 
+                ctx.closePath();
+                
+                ctx.beginPath();
+                ctx.moveTo(210, 210); 
+                ctx.lineTo(210, 10); 
+                ctx.lineTo(10, 210);
+                ctx.closePath();
+                ctx.stroke();
+            }
+        }
+    
+    </script>
+    </body>
+</html>
